@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DiaryEntryRepository extends JpaRepository<DiaryEntry, Long> {
 
+//    Object findByDateTime(String dateTime);
 }

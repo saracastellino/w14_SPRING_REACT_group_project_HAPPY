@@ -27,10 +27,11 @@ public class DiaryEntry {
     private User user;
 
 
-    public DiaryEntry(String dateTime, int mood, String text) {
+    public DiaryEntry(String dateTime, int mood, String text, User user) {
         this.dateTime = dateTime;
         this.mood = mood;
         this.text = text;
+        this.user = user;
     }
 
     public DiaryEntry() {
@@ -67,5 +68,13 @@ public class DiaryEntry {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
