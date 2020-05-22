@@ -3,6 +3,7 @@ package com.example.happyteam.happyservice.controllers;
 import com.example.happyteam.happyservice.models.DiaryEntry;
 import com.example.happyteam.happyservice.models.User;
 import com.example.happyteam.happyservice.repositories.DiaryEntryRepository;
+import com.example.happyteam.happyservice.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
