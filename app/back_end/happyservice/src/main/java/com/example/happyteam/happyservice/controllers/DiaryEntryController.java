@@ -20,12 +20,23 @@ public class DiaryEntryController {
 
     @GetMapping
     public ResponseEntity<List<DiaryEntry>> getAllDiaryEntries(
-            @RequestParam(name = "date_time", required = false) String dateTime,
-            @RequestParam(name = "mood", required = false) Integer mood,
-            @RequestParam(name = "text", required = false) String text
+//            @RequestParam(name = "date_time", required = false) String dateTime,
+//            @RequestParam(name = "mood", required = false) Integer mood,
+//            @RequestParam(name = "text", required = false) String text
     ) {
-            return new ResponseEntity<List<DiaryEntry>>(diaryEntryRepository.findAll(), HttpStatus.OK);
+        List<DiaryEntry> foundDiaryEntries = diaryEntryRepository.findAll();
+            return new ResponseEntity<List<DiaryEntry>>(foundDiaryEntries, HttpStatus.OK);
         }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity getDiaryEntry(@PathVariable Long id){
+        return new ResponseEntity<>(diaryEntryRepository.findById(id), HttpStatus.OK);
+    }
+
+
+    //findByDate
+
+    //findByMood
 
     @PostMapping
     public ResponseEntity<DiaryEntry> postDiaryEntry(@RequestBody DiaryEntry diaryEntry) {

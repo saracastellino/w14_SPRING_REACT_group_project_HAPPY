@@ -1,11 +1,12 @@
 package com.example.happyteam.happyservice.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="diary")
+@Table(name="diary_entries")
 
 public class DiaryEntry {
 
@@ -23,7 +24,8 @@ public class DiaryEntry {
     private String text;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false)
+//    @JsonIgnoreProperties("diary_entries")
     private User user;
 
 

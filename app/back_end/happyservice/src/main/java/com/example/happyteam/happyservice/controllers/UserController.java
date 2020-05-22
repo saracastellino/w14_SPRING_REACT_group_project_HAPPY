@@ -28,12 +28,16 @@ public class UserController {
         return new ResponseEntity<List<User>>(userRepository.findAll(), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/{id}")
+    public ResponseEntity getUser(@PathVariable Long id){
+        return new ResponseEntity<>(userRepository.findById(id), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<User> postUser(@RequestBody User user) {
         userRepository.save(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
-
 
     @PutMapping(value = "/{id}")
     public ResponseEntity<User> putDiaryEntry(@RequestBody User user, @PathVariable Long id){

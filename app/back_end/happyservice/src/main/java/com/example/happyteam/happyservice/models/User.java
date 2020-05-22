@@ -1,5 +1,8 @@
 package com.example.happyteam.happyservice.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +30,9 @@ public class User {
     @Column(name="fitness_level")
     private int fitnessLevel;
 
-    @OneToMany(mappedBy = "user")
+    @JsonBackReference
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+//    @JsonIgnoreProperties("employer")
     private List<DiaryEntry> diaryEntries;
 
     public User(String name, int age, String dietaryPreferences, String musicType, int fitnessLevel) {

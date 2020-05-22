@@ -30,9 +30,9 @@ public class DataLoader implements ApplicationRunner {
 
         User julia = new User("Julia", 35, "Vegetarian", "Rock", 1);
         userRepository.save(julia);
-        User jun = new User("Jun", 35, "Vegan", "Rock", 4);
+        User jun = new User("Jun", 25, "Vegan", "Pop", 4);
         userRepository.save(jun);
-        User sara = new User("Sara", 35, "Paleo Diet", "Rock", 2);
+        User sara = new User("Sara", 55, "Paleo Diet", "Opera", 2);
         userRepository.save(sara);
 
 
