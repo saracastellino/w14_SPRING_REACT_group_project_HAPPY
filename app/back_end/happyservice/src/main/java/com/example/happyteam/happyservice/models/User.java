@@ -1,14 +1,13 @@
 package com.example.happyteam.happyservice.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -21,18 +20,17 @@ public class User {
     @Column
     private int age;
 
-    @Column(name="dietary_preferences")
+    @Column(name = "dietary_preferences")
     private String dietaryPreferences;
 
-    @Column(name="music_type")
+    @Column(name = "music_type")
     private String musicType;
 
-    @Column(name="fitness_level")
+    @Column(name = "fitness_level")
     private int fitnessLevel;
 
     @JsonBackReference
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-//    @JsonIgnoreProperties("employer")
     private List<DiaryEntry> diaryEntries;
 
     public User(String name, int age, String dietaryPreferences, String musicType, int fitnessLevel) {

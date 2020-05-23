@@ -1,6 +1,5 @@
 package com.example.happyteam.happyservice.controllers;
 
-import com.example.happyteam.happyservice.models.DiaryEntry;
 import com.example.happyteam.happyservice.models.User;
 import com.example.happyteam.happyservice.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity getUser(@PathVariable Long id){
+    public ResponseEntity getUser(@PathVariable Long id) {
         return new ResponseEntity<>(userRepository.findById(id), HttpStatus.OK);
     }
 
@@ -40,8 +39,8 @@ public class UserController {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<User> putDiaryEntry(@RequestBody User user, @PathVariable Long id){
-        if (user.getId().longValue() != id){
+    public ResponseEntity<User> putDiaryEntry(@RequestBody User user, @PathVariable Long id) {
+        if (user.getId().longValue() != id) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         userRepository.save(user);
@@ -49,7 +48,7 @@ public class UserController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<List<User>> deleteUser(@PathVariable Long id){
+    public ResponseEntity<List<User>> deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
         return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
     }

@@ -4,16 +4,10 @@ import com.example.happyteam.happyservice.models.DiaryEntry;
 import com.example.happyteam.happyservice.models.User;
 import com.example.happyteam.happyservice.repositories.DiaryEntryRepository;
 import com.example.happyteam.happyservice.repositories.UserRepository;
-import net.bytebuddy.implementation.auxiliary.AuxiliaryType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.persistence.Column;
-import javax.persistence.OneToMany;
-import java.util.List;
 
 @Component
 public class DataLoader implements ApplicationRunner {

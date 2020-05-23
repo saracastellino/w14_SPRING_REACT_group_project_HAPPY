@@ -10,6 +10,7 @@ import java.util.List;
 public interface DiaryEntryRepository extends JpaRepository<DiaryEntry, Long> {
 
     List<DiaryEntry> findByDateTime(String dateTime);
+
     List<DiaryEntry> findByMood(int mood);
 
 }

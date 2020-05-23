@@ -1,12 +1,9 @@
 package com.example.happyteam.happyservice.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="diary_entries")
+@Table(name = "diary_entries")
 
 public class DiaryEntry {
 
@@ -14,19 +11,18 @@ public class DiaryEntry {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="date_time")
+    @Column(name = "date_time")
     private String dateTime;
 
-    @Column(name="mood")
+    @Column(name = "mood")
     private int mood;
 
-    @Column(name="text")
+    @Column(name = "text")
     private String text;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
 
     public DiaryEntry(String dateTime, int mood, String text, User user) {
         this.dateTime = dateTime;
