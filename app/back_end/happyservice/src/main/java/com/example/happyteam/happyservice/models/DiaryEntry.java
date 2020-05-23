@@ -25,7 +25,6 @@ public class DiaryEntry {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-//    @JsonIgnoreProperties("diary_entries")
     private User user;
 
 

@@ -1,9 +1,7 @@
 package com.example.happyteam.happyservice.controllers;
 
 import com.example.happyteam.happyservice.models.DiaryEntry;
-import com.example.happyteam.happyservice.models.User;
 import com.example.happyteam.happyservice.repositories.DiaryEntryRepository;
-import com.example.happyteam.happyservice.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,24 +17,27 @@ public class DiaryEntryController {
     DiaryEntryRepository diaryEntryRepository;
 
     @GetMapping
-    public ResponseEntity<List<DiaryEntry>> getAllDiaryEntries(
-//            @RequestParam(name = "date_time", required = false) String dateTime,
-//            @RequestParam(name = "mood", required = false) Integer mood,
-//            @RequestParam(name = "text", required = false) String text
+    public ResponseEntity<List<DiaryEntry>> getAllDiaryEntriesAndFilters(
+            @RequestParam(required = false, name = "dateTime") String dateTime,
+            @RequestParam(required = false, name = "mood") Integer mood
     ) {
+        if (dateTime != null){
+            return new ResponseEntity(diaryEntryRepository.findByDateTime(dateTime), HttpStatus.OK);
+        }
+
+        if (mood != null){
+            return new ResponseEntity(diaryEntryRepository.findByMood(mood), HttpStatus.OK);
+        }
+
         List<DiaryEntry> foundDiaryEntries = diaryEntryRepository.findAll();
             return new ResponseEntity<List<DiaryEntry>>(foundDiaryEntries, HttpStatus.OK);
         }
+
 
     @GetMapping(value = "/{id}")
     public ResponseEntity getDiaryEntry(@PathVariable Long id){
         return new ResponseEntity<>(diaryEntryRepository.findById(id), HttpStatus.OK);
     }
-
-
-    //findByDate
-
-    //findByMood
 
     @PostMapping
     public ResponseEntity<DiaryEntry> postDiaryEntry(@RequestBody DiaryEntry diaryEntry) {
