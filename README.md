@@ -1,12 +1,15 @@
 # Happy - CodeClan final project
 
-## Goal:
+## Goal
+
 Create a responsive mobile app allowing the user to track their mood over time and suggest appropriate internet resources to help improve mood and wellbeing. The app is inspired by the difficulties many people are experiencing during ‘lockdown’ and designed to tie in with Mental Health Awareness Week.
 
-## Tech:
+## Tech
+
 React, Java/Spring, H2
 
-## MVP:
+## MVP
+
 The user is prompted to create a profile with basic details such as age, dietary preference, fitness level, favourite music type, etc.
 Once a profile is created, the app greets the user by name on opening, and does not show the profile creation steps again
 Profile should be able to be updated by the user
