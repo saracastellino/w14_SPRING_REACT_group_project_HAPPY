@@ -1,8 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
-import SubmitMood from '../components/SubmitMood';
+import Header from '../components/home/Header';
+import DataContainer from './Data/DataContainer';
+import SubmitMood from '../components/MoodData/SubmitMood';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-class HomePage extends React.Component {
+
+class MainContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -36,11 +39,12 @@ class HomePage extends React.Component {
 
   render(){
     return(
-      <>
+      <Router>
+
       <Header />
       <SubmitMood onMoodSubmit={this.handleMoodSubmit}/>
-      </>
+      </Router>
     );
   }
 }
-export default HomePage;
+export default MainContainer;
