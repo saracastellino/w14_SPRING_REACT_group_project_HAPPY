@@ -2,7 +2,8 @@ import React from 'react';
 import Header from '../components/home/Header';
 import DataContainer from './Data/DataContainer';
 import SubmitMood from '../components/MoodData/SubmitMood';
-import Form from "../components/Form";
+import Quote from '../components/home/Quote'
+import Form from "../components/Profile/Form";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 

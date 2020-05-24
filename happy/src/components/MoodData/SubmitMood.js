@@ -1,6 +1,6 @@
 //this is for the user to enter daily mood data with emoji plus submit button 
 import React, {Component} from 'react';
-import logo from '../img/logo192.png';
+import logo from '../../img/logo192.png';
 import './SubmitMood.css';
 
 class SubmitMood extends Component{

@@ -15,9 +15,9 @@ class Form extends Component {
 
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleAgeChange = this.handleAgeChange.bind(this);
-    his.handleDietaryPreferencesChange = this.handleDietaryPreferencesChange.bind(this);
-    his.handleMusicTypeChange = this.handleMusicTypeChange.bind(this);
-    his.handleFitnessLevelChange = this.handleFitnessLevelChange.bind(this);
+    this.handleDietaryPreferencesChange = this.handleDietaryPreferencesChange.bind(this);
+    this.handleMusicTypeChange = this.handleMusicTypeChange.bind(this);
+    this.handleFitnessLevelChange = this.handleFitnessLevelChange.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
