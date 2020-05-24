@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/back_end/happyservice/happyservice.iml" filepath="$PROJECT_DIR$/app/back_end/happyservice/happyservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/w14_SPRING_REACT_group_project_HAPPY.iml" filepath="$PROJECT_DIR$/.idea/w14_SPRING_REACT_group_project_HAPPY.iml" />
+    </modules>
+  </component>
+</project>
