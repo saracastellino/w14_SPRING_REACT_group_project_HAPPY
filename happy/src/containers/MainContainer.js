@@ -2,7 +2,9 @@ import React from 'react';
 import Header from '../components/home/Header';
 import DataContainer from './Data/DataContainer';
 import SubmitMood from '../components/MoodData/SubmitMood';
+import Form from "../components/Form";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 
 class MainContainer extends React.Component {
@@ -16,11 +18,17 @@ class MainContainer extends React.Component {
         text: "Ate pizza, coded and loved JS",
         user: "julia"
       }],
-        user: {
-          name: "Julia"
-        }
+      user: { 
+        id: "", 
+        name: "", 
+        age: "", 
+        dietaryPreferences: "", 
+        musicType: "", 
+        fitnessLevel: "" 
+    } 
     }
     this.handleMoodSubmit = this.handleMoodSubmit.bind(this);
+    this.handleUserSubmit = this.handleUserSubmit.bind(this); 
   }
 
   handleMoodSubmit(newMoodLog){
@@ -37,12 +45,20 @@ class MainContainer extends React.Component {
     });
   }
 
+  handleUserSubmit(submittedUser) {
+    submittedUser.id = Date.now(); 
+    const userCreated = [...this.state.user, submittedUser]; 
+    this.setState({ user: userCreated });
+   }
+
   render(){
     return(
       <Router>
 
       <Header />
       <SubmitMood onMoodSubmit={this.handleMoodSubmit}/>
+      <Form onUserSubmit={this.handleUserSubmit} /> 
+      <Quote/> 
       </Router>
     );
   }
