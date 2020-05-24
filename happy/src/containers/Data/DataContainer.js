@@ -1,6 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-class DataContainer extends Component {
+class DataContainer extends React.Component {
 constructor(props){
   super(props);
     this.state = {
