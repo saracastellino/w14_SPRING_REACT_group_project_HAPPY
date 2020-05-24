@@ -19,11 +19,19 @@ class Quote extends Component {
 
   render(){
     const allQuotes = this.state.quotes.map(quote => {
-        return (
-          <p>{quote.text}, by {quote.author}</p>
+      if (!quote.author) return (
+          <>
+          <p>{quote.text}</p>
+          <h4>(Anonymous)</h4>
+          </>)
+      return (
+          <>
+          <p>{quote.text}</p>
+          <h4>({quote.author})</h4>
+          </>
         );
       })
-    const quoteOfTheDay = allQuotes[Math.floor(Math.random() * allQuotes.length)];
+      const quoteOfTheDay = allQuotes[Math.floor(Math.random() * allQuotes.length)];
   
       return (
        <>
