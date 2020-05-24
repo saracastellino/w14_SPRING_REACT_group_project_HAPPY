@@ -18,3 +18,9 @@ constructor(props){
     }
   }
 }
+
+export default DataContainer;
+
+
+
+//this will have the data entry point from backend
