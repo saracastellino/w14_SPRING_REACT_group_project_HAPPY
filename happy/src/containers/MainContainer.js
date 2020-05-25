@@ -28,7 +28,8 @@ class MainContainer extends React.Component{
 
       <Header />
       <br/>
-      <button onClick={this.showForm.bind(null, true)}>Create Profile</button>
+      <button onClick={this.showForm.bind(null)}>Create Profile</button>
+      
       <Quote/>
       <Nav />
       </Router>

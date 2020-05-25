@@ -10,7 +10,7 @@ class Form extends Component {
       age: "",
       dietaryPreferences: "",
       musicType: "",
-      fitnessLevel: ""      
+      fitnessLevel: ""
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -22,6 +22,7 @@ class Form extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  
   handleSubmit(event) {
     event.preventDefault();
     const name = this.state.name.trim();
@@ -164,7 +165,7 @@ class Form extends Component {
 //             value={this.state.fitnessLevel}
 //             onChange={this.handleFitnessLevelChange}
 //           />
- 
+
 //               <Modal trigger={<Button color="blue" fluid size="large" type="submit" value="Post">Create my profile!</Button>}>
 //                 <Modal.Header>Thank you user.name</Modal.Header>
 //                 <Modal.Description>
