@@ -1,67 +1,40 @@
 import React from 'react';
 import Header from '../components/home/Header';
 import DataContainer from './Data/DataContainer';
-import SubmitMood from '../components/MoodData/SubmitMood';
 import Quote from '../components/home/Quote'
-import Form from "../components/Profile/Form";
+import Nav from '../Nav';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 
-class MainContainer extends React.Component {
+class MainContainer extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-      diaryEntries: [{
-        id: 1,
-        dateTime: "22 05 2020",
-        mood: 5,
-        text: "Ate pizza, coded and loved JS",
-        user: "julia"
-      }],
-      user: { 
-        id: "", 
-        name: "", 
-        age: "", 
-        dietaryPreferences: "", 
-        musicType: "", 
-        fitnessLevel: "" 
-    } 
+    this.state = { showForm:false }
+
     }
-    this.handleMoodSubmit = this.handleMoodSubmit.bind(this);
-    this.handleUserSubmit = this.handleUserSubmit.bind(this); 
-  }
+    showForm = (bool) =>{
+      this.setState({
+        showForm: bool
+      });
+    }
 
-  handleMoodSubmit(newMoodLog){
-  
-    let today = new Date();
-    var date = today.getDate()+ ' ' + (today.getMonth()+1) + ' ' + today.getFullYear();
-    console.log(date);
-    // newMoodLog.id = Date.now();
-    newMoodLog.dateTime = date;
-    const updatedMoodLogs = [...this.state.diaryEntries, newMoodLog];
-    console.log(updatedMoodLogs);
-    this.setState({
-      diaryEntries: updatedMoodLogs
-    });
-  }
 
-  handleUserSubmit(submittedUser) {
-    submittedUser.id = Date.now(); 
-    const userCreated = [...this.state.user, submittedUser]; 
-    this.setState({ user: userCreated });
-   }
 
-  render(){
+  render() {
     return(
+      <div>
       <Router>
 
       <Header />
-      <SubmitMood onMoodSubmit={this.handleMoodSubmit}/>
-      <Form onUserSubmit={this.handleUserSubmit} /> 
-      <Quote/> 
+      <br/>
+      <button onClick={this.showForm.bind(null, true)}>Create Profile</button>
+      <Quote/>
+      <Nav />
       </Router>
-    );
+      </div>
+    )
   }
 }
+
 export default MainContainer;
