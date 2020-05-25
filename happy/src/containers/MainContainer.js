@@ -2,7 +2,9 @@ import React from 'react';
 import Header from '../components/home/Header';
 import DataContainer from './Data/DataContainer';
 import SubmitMood from '../components/MoodData/SubmitMood';
+import Graph from '../components/MoodData/Graph';
 import Quote from '../components/home/Quote'
+import Links from '../components/home/Links'
 import Form from "../components/Profile/Form";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -14,7 +16,35 @@ class MainContainer extends React.Component {
     this.state = {
       diaryEntries: [{
         id: 1,
+        dateTime: "20 05 2020",
+        mood: 4,
+        text: "Ate pizza, coded and loved JS",
+        user: "julia"
+      },
+      {
+        id: 1,
+        dateTime: "21 05 2020",
+        mood: 3,
+        text: "Ate pizza, coded and loved JS",
+        user: "julia"
+      },
+      {
+        id: 1,
         dateTime: "22 05 2020",
+        mood: 2,
+        text: "Ate pizza, coded and loved JS",
+        user: "julia"
+      },
+      {
+        id: 1,
+        dateTime: "23 05 2020",
+        mood: 5,
+        text: "Ate pizza, coded and loved JS",
+        user: "julia"
+      },
+      {
+        id: 1,
+        dateTime: "24 05 2020",
         mood: 5,
         text: "Ate pizza, coded and loved JS",
         user: "julia"
@@ -60,6 +90,8 @@ class MainContainer extends React.Component {
       <SubmitMood onMoodSubmit={this.handleMoodSubmit}/>
       <Form onUserSubmit={this.handleUserSubmit} /> 
       <Quote/> 
+      <Graph diaryEntries={ this.state.diaryEntries }/>
+      <Links/>
       </Router>
     );
   }

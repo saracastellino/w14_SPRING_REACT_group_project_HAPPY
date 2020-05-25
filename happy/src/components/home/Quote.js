@@ -32,7 +32,6 @@ class Quote extends Component {
         );
       })
       const quoteOfTheDay = allQuotes[Math.floor(Math.random() * allQuotes.length)];
-  
       return (
        <>
          <h3> {quoteOfTheDay} </h3>
