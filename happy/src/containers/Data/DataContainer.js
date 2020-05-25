@@ -1,8 +1,10 @@
 import React from 'react';
 import SubmitMood from '../../../src/components/MoodData/SubmitMood';
+import Moodlog from '../../components/MoodData/MoodLog';
 import Form from "../../../src/components/Profile/Form";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 class DataContainer extends React.Component {
   constructor(props){
@@ -52,9 +54,11 @@ class DataContainer extends React.Component {
     return(
       <Router>
 
-
       <SubmitMood onMoodSubmit={this.handleMoodSubmit}/>
       <Form onUserSubmit={this.handleUserSubmit} />
+  
+      <h1>Mood Diary</h1>
+      <Moodlog diaryEntries={this.state.diaryEntries}/>
 
       </Router>
     );
