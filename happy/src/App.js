@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import MainContainer from './containers/MainContainer';
 
- class App extends Component {
+import MainContainer from './containers/MainContainer';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+ class App extends React.Component {
    render(){
      return(
+
        <MainContainer />
+
+
      );
    }
  }
