@@ -3,6 +3,7 @@ import SubmitMood from '../../../src/components/MoodData/SubmitMood';
 import Moodlog from '../../components/MoodData/MoodLog';
 import Form from "../../../src/components/Profile/Form";
 import Nav from '../../Nav';
+import Header from '../../components/home/Header';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -30,7 +31,7 @@ class DataContainer extends React.Component {
     // }
       diaryEntries: [],
       user: {
-        id: "",
+        // id: "",
         name: "",
         age: "",
         dietaryPreferences: "",
@@ -59,9 +60,13 @@ class DataContainer extends React.Component {
   }
 
   handleUserSubmit(submittedUser) {
-    submittedUser.id = Date.now();
-    const userCreated = [...this.state.user, submittedUser];
-    this.setState({ user: userCreated });
+    console.log(submittedUser);
+    this.setState({
+      user: submittedUser
+    })
+    // submittedUser.id = Date.now();
+    // const userCreated = [...this.state.user, submittedUser];
+    // this.setState({ user: userCreated });
    }
 
   render(){
@@ -71,7 +76,9 @@ class DataContainer extends React.Component {
           onMoodSubmit={this.handleMoodSubmit}
           onUserSubmit={this.handleUserSubmit}
           diaryEntries={this.state.diaryEntries}
+          user={this.state.user}
         />
+        
         {/* <SubmitMood onMoodSubmit={this.handleMoodSubmit}/> */}
         {/* <Form onUserSubmit={this.handleUserSubmit} /> */}
     

@@ -6,11 +6,11 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "Keith",
-      age: 21,
-      dietaryPreferences: "Veggie",
-      musicType: "Rock",
-      fitnessLevel: "Medium"
+      name: "",
+      age: 0,
+      dietaryPreferences: "",
+      musicType: "",
+      fitnessLevel: 0
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -20,6 +20,7 @@ class Form extends Component {
     this.handleFitnessLevelChange = this.handleFitnessLevelChange.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   
@@ -34,7 +35,7 @@ class Form extends Component {
       return
     }
 
-    this.props.onCommentSubmit({
+    this.props.onUserSubmit({
         name: name,
         age: age,
         dietaryPreferences: dietaryPreferences,
@@ -49,6 +50,39 @@ class Form extends Component {
         musicType: "",
         fitnessLevel: ""
     });
+  }
+
+  handleUpdate(event){
+    event.preventDefault();
+    console.log("update...");
+    console.log("name:"+event.target.name.value);
+    console.log("age:" + event.target.age.value);
+    console.log("dietary:"+event.target.dietary.value);
+    console.log("music:"+event.target.music.value);
+    console.log("fitness:"+event.target.fitness.value);
+    const name = event.target.name.value;
+    const age = event.target.age.value;
+    const dietaryPreferences = event.target.dietary.value;
+    const musicType = event.target.music.value;
+    const fitnessLevel = event.target.fitness.value;
+
+    // const name = this.state.name.trim();
+    // const age = this.state.age.trim();
+    // const dietaryPreferences = this.state.dietaryPreferences.trim();
+    // const musicType = this.state.musicType.trim();
+    // const fitnessLevel = this.state.fitnessLevel.trim();
+    if (!name || !age || !dietaryPreferences || !musicType || !fitnessLevel) {
+      return
+    }
+
+    this.props.onUserSubmit({
+        name: name,
+        age: age,
+        dietaryPreferences: dietaryPreferences,
+        musicType: musicType,
+        fitnessLevel: fitnessLevel
+    });
+
   }
 
   handleNameChange(event) {
@@ -82,40 +116,121 @@ class Form extends Component {
   }
 
   render() {
-     return (
-       <form className="profile-form" >
-         <input
-           type="text"
-           placeholder="Your name"
-           value={this.state.name}
-           onChange={this.handleNameChange}
-         />
-         <input
-           type="number"
-           placeholder="Your age"
-           value={this.state.age}
-           onChange={this.handleAgeChange}
-         />
+     if("" === this.props.user.name){
+      return (
+        <>
+        <p>First time to use? Please input your profile.</p>
+        <form className="profile-form" onSubmit={this.handleSubmit}>
+          <label>Input your name: </label>
+          <br/>
           <input
-           type="string"
-           placeholder="Your dietary habits"
-           value={this.state.dietaryPreferences}
-            onChange={this.handleDietaryPreferencesChange}
-         />
+            type="text"
+            placeholder="Your name"
+            value={this.state.name}
+            onChange={this.handleNameChange}
+          />
+          <br/>
+          <label>Input your age: </label>
+          <br/>
           <input
-           type="string"
-           placeholder="Your favourit music"
-           value={this.state.musicType}
-            onChange={this.handleMusicTypeChange}
-         />
+            type="number"
+            placeholder="Your age"
+            value={this.state.age}
+            onChange={this.handleAgeChange}
+          />
+          <br/>
+          <label>Input your dietary habits: </label>
+          <br/>
+           <input
+            type="string"
+            placeholder="Your dietary habits"
+            value={this.state.dietaryPreferences}
+             onChange={this.handleDietaryPreferencesChange}
+          />
+          <br/>
+          <label>Input your favourit music type: </label>
+          <br/>
+           <input
+            type="string"
+            placeholder="Your favourit music"
+            value={this.state.musicType}
+             onChange={this.handleMusicTypeChange}
+          />
+          <br/>
+          <label>Input your fitness level</label>
+          <br/>
+           <input
+            type="number"
+            placeholder="Your fitness level"
+            value={this.state.fitnessLevel}
+             onChange={this.handleFitnessLevelChange}
+          />
+          <br/>
+          <input type="submit" value="Post" />
+        </form>
+        </>
+      );
+     }else{
+       return(
+         <>
+         <p>Wish to change your profile?</p>
+         <form className="profile-form-update" onSubmit={this.handleUpdate}>
+          <label>Input your name: </label>
+          <br/>
           <input
-           type="number"
-           placeholder="Your fitness level"
-           value={this.state.fitnessLevel}
-            onChange={this.handleFitnessLevelChange}
-         />
-         <input type="submit" value="Post" />
-       </form>
+            type="text"
+            placeholder="Your name"
+            defaultValue={this.props.user.name}
+            name="name"
+            onChange={this.handleNameChange}
+          />
+          <br/>
+          <label>Input your age: </label>
+          <br/>
+          <input
+            type="number"
+            placeholder="Your age"
+            defaultValue={this.props.user.age}
+            onChange={this.handleAgeChange}
+            name="age"
+          />
+          <br/>
+          <label>Input your dietary habits: </label>
+          <br/>
+           <input
+            type="string"
+            placeholder="Your dietary habits"
+            defaultValue={this.props.user.dietaryPreferences}
+             onChange={this.handleDietaryPreferencesChange}
+             name="dietary"
+          />
+          <br/>
+          <label>Input your favourit music type: </label>
+          <br/>
+           <input
+            type="string"
+            placeholder="Your favourit music"
+            defaultValue={this.props.user.musicType}
+             onChange={this.handleMusicTypeChange}
+             name="music"
+          />
+          <br/>
+          <label>Input your fitness level</label>
+          <br/>
+           <input
+            type="number"
+            placeholder="Your fitness level"
+            defaultValue={this.props.user.fitnessLevel}
+             onChange={this.handleFitnessLevelChange}
+             name="fitness"
+          />
+          <br/>
+          <input type="submit" value="Post" />
+        </form>
+         </>
+       )
+     }
+     
 
 //  ********************** SEMANTIC UI **********************
 //    <Grid centered columns={2}>
@@ -182,7 +297,7 @@ class Form extends Component {
 //   </Grid>
 // *********************************************************
 
-     );
+    
    }
 }
 

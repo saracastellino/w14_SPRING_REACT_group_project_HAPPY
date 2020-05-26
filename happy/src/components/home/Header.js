@@ -7,21 +7,21 @@ const Header = (props) => {
 
     //if form is blank, return
     <div>
-    <h2>hello</h2>
+    <h2>hello [{props.user.name}]</h2>
       <h3>how are you today?</h3>
-
+      
 
     </div>
   );
 
 
 //if form is not blank, return:
-  return(
+  // return(
 
-    <div>
-    <h2>hello {this.state.name}</h2>
-    <h3>how are you today?</h3>
-    </div>
-  );
+  //   <div>
+  //   <h2>hello {this.state.name}</h2>
+  //   <h3>how are you today?</h3>
+  //   </div>
+  // );
 }
 export default Header;
