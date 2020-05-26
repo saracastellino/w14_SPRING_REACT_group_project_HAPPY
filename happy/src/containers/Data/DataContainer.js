@@ -46,7 +46,7 @@ class DataContainer extends React.Component {
     fetch(url)
     .then(res => res.json())
     .then(result => this.setState({diaryEntries: result}))
-    .catch(err => console.err(err))
+    .catch(err => console.log(err))
   }
 
   handleMoodSubmit(newMoodLog){
