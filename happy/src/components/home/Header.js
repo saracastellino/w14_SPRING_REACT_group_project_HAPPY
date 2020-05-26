@@ -9,11 +9,7 @@ const Header = (props) => {
     <div>
     <h2>hello</h2>
       <h3>how are you today?</h3>
-        <Link to="./Profile/form">
-        <button>
-        Create Profile
-        </button>
-        </Link>
+
 
     </div>
   );
