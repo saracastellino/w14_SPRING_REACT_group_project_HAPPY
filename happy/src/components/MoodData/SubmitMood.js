@@ -9,7 +9,8 @@ class SubmitMood extends Component{
         super(props);
         this.state = {
             mood: 0,
-            text: ""
+            text: "",
+
         };
         this.handleMoodChange = this.handleMoodChange.bind(this);
         this.handleTextChange = this.handleTextChange.bind(this);
@@ -24,9 +25,16 @@ class SubmitMood extends Component{
             return
         }
         //  update the list of moodLog
+        let today = new Date();
+        var date = today.getDate()+ ' ' + (today.getMonth()+1) + ' ' + today.getFullYear();
+    
         this.props.onMoodSubmit({
-            mood: mood,
-            text: text
+            "dateTime": date,
+            "mood": mood,
+            "text": text,
+            "user": {
+                "id": 1
+            }
         });
 
         this.setState({

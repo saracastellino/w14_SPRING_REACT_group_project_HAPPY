@@ -51,9 +51,6 @@ class DataContainer extends React.Component {
 
   handleMoodSubmit(newMoodLog){
     DiaryEntriesService.addDiaryEntries(newMoodLog);
-    let today = new Date();
-    var date = today.getDate()+ ' ' + (today.getMonth()+1) + ' ' + today.getFullYear();
-    newMoodLog.dateTime = date;
     const updatedMoodLogs = [...this.state.diaryEntries, newMoodLog];
     this.setState({
       diaryEntries: updatedMoodLogs
