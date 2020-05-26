@@ -1,23 +1,25 @@
 import React from 'react';
-import { 
+import {
   Link,
   Route,
   BrowserRouter as Router,
   Switch
 } from 'react-router-dom';
-import DataContainer from './containers/Data/DataContainer'
-import UserProfile from './components/Profile/UserProfile'
-import Graph from './components/MoodData/Graph'
+import DataContainer from './containers/Data/DataContainer';
+import UserProfile from './components/Profile/Form';
+import Graph from './components/MoodData/Graph';
+import Links from './components/home/Links';
+import SubmitMood from './components/MoodData/SubmitMood';
 
 const Nav = (props) => (
   <Router>
     <ul>
       <li >
-        <Link to="/">Home</Link>
+        <Link to="/submitmood">Home</Link>
       </li>
 
       <li>
-        <Link to="/stats">Stats</Link>
+        <Link to="/graph">Stats</Link>
       </li>
 
       <li>
@@ -25,27 +27,27 @@ const Nav = (props) => (
       </li>
 
       <li>
-        <Link to="/log">Log Mood</Link>
+        <Link to="/links">Links</Link>
       </li>
     </ul>
 
     <Switch>
 
-      <Route path='/log'>
-        <DataContainer />
+      <Route path='/submitmood'>
+        <SubmitMood />
       </Route>
 
       <Route path="/profile">
         <UserProfile />
       </Route>
 
-      <Route path="/stats">
+      <Route path="/graph">
         <Graph />
       </Route>
 
-      {/* <Route path="/">
-
-      </Route> */}
+      <Route path="/links">
+        <Links />
+      </Route>
 
 
 
