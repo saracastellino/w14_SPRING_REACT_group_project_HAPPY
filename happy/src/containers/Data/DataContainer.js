@@ -5,18 +5,29 @@ import Form from "../../../src/components/Profile/Form";
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import DiaryEntriesService from "../../services/DiaryEntriesService";
+
 
 class DataContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      diaryEntries: [{
-        id: 1,
-        dateTime: "22 05 2020",
-        mood: 5,
-        text: "Ate pizza, coded and loved JS",
-        user: "julia"
-      }],
+    //   diaryEntries: [{
+    //     id: 1,
+    //     dateTime: "22 05 2020",
+    //     mood: 5,
+    //     text: "Ate pizza, coded and loved JS",
+    //     user: "julia"
+    //   }],
+    //   user: {
+    //     id: "",
+    //     name: "",
+    //     age: "",
+    //     dietaryPreferences: "",
+    //     musicType: "",
+    //     fitnessLevel: ""
+    // }
+      diaryEntries: [],
       user: {
         id: "",
         name: "",
@@ -24,21 +35,26 @@ class DataContainer extends React.Component {
         dietaryPreferences: "",
         musicType: "",
         fitnessLevel: ""
-    }
+      }
     }
     this.handleMoodSubmit = this.handleMoodSubmit.bind(this);
     this.handleUserSubmit = this.handleUserSubmit.bind(this);
   }
 
-  handleMoodSubmit(newMoodLog){
+  componentDidMount(){
+    const url = "http://localhost:8080/diary_entries";
+    fetch(url)
+    .then(res => res.json())
+    .then(result => this.setState({diaryEntries: result}))
+    .catch(err => console.err(err))
+  }
 
+  handleMoodSubmit(newMoodLog){
+    DiaryEntriesService.addDiaryEntries(newMoodLog);
     let today = new Date();
     var date = today.getDate()+ ' ' + (today.getMonth()+1) + ' ' + today.getFullYear();
-    console.log(date);
-    // newMoodLog.id = Date.now();
     newMoodLog.dateTime = date;
     const updatedMoodLogs = [...this.state.diaryEntries, newMoodLog];
-    console.log(updatedMoodLogs);
     this.setState({
       diaryEntries: updatedMoodLogs
     });

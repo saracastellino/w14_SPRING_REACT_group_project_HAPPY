@@ -7,7 +7,6 @@ import Nav from '../Nav';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
-
 class MainContainer extends React.Component{
   constructor(props){
     super(props);

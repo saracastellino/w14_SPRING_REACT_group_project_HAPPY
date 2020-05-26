@@ -6,11 +6,11 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      age: "",
-      dietaryPreferences: "",
-      musicType: "",
-      fitnessLevel: ""
+      name: "Keith",
+      age: 21,
+      dietaryPreferences: "Veggie",
+      musicType: "Rock",
+      fitnessLevel: "Medium"
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);

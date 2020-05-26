@@ -20,7 +20,6 @@ class SubmitMood extends Component{
         evt.preventDefault();
         const mood = this.state.mood;
         const text = this.state.text.trim();
-        console.log("mood:"+mood+" text:"+text);
         if(!text){
             return
         }
