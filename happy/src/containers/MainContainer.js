@@ -21,7 +21,7 @@ class MainContainer extends React.Component{
       <br/>
       <Quote/>
       <br/>
-      <Nav />
+      {/* <Nav /> */}
 
       </Router>
       </div>

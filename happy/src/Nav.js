@@ -34,7 +34,7 @@ const Nav = (props) => (
     <Switch>
 
       <Route path='/submitmood'>
-        <SubmitMood />
+        <SubmitMood onMoodSubmit={props.onMoodSubmit}/>
       </Route>
 
       <Route path="/profile">
@@ -42,7 +42,8 @@ const Nav = (props) => (
       </Route>
 
       <Route path="/graph">
-        <Graph />
+        {/* <Graph /> */}
+        <Graph diaryEntries={props.diaryEntries}/>
       </Route>
 
       <Route path="/links">
