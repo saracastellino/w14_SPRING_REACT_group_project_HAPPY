@@ -7,17 +7,8 @@ import Nav from '../Nav';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
-
 class MainContainer extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = { showForm:false }
-    }
-    showForm = (bool) =>{
-      this.setState({
-        showForm: bool
-      });
-    }
+
 
 
 
@@ -28,10 +19,10 @@ class MainContainer extends React.Component{
 
       <Header />
       <br/>
-      <button onClick={this.showForm.bind(null)}>Create Profile</button>
-      
       <Quote/>
+      <br/>
       <Nav />
+
       </Router>
       </div>
     )
