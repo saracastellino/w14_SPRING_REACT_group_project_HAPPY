@@ -35,7 +35,7 @@ import {  ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Area, Tooltip, Cell }
                 </linearGradient>
             </defs>
             <CartesianGrid stroke="#f5f5f5" />
-            <XAxis type="number" />
+            <XAxis type="number" domain={[0, 5]} dataKey="x" tick={false}/>
             <YAxis dataKey="dateTime" type="category" />
             <Tooltip/>
 
@@ -56,8 +56,8 @@ import {  ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Area, Tooltip, Cell }
                 }
             </Bar>
         </ComposedChart>
-            </>
-        );
-    }
+        </>
+    );
+}
     
 export default Graph;
