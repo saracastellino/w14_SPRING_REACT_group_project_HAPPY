@@ -2,7 +2,9 @@ import React from 'react';
 
 const Header = (props) => {
   return(
-    <div>
+    <div className="header-greeting">
+        <h1>Happy!</h1>
+        <h5>Your personal mood tracker</h5>
        <h2>Hello {props.user.name}</h2>
     </div>
   );

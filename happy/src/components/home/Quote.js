@@ -25,10 +25,11 @@ class Quote extends Component {
           <h4>(Anonymous)</h4>
           </>)
       return (
-          <>
+        <div className="quote">
           <h2>{quote.text}</h2>
           <h4>({quote.author})</h4>
-          </>
+        </div>
+        
         );
       })
       const quoteOfTheDay = allQuotes[Math.floor(Math.random() * allQuotes.length)];

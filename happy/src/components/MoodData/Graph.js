@@ -22,6 +22,7 @@ import Moodlog from './MoodLog';
         <>
         <Moodlog diaryEntries={props.diaryEntries}/>
         <ComposedChart
+            className="graph"
             layout="vertical"
             width={500}
             height={400}
