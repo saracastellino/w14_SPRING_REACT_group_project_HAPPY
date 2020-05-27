@@ -1,5 +1,6 @@
 import React from 'react';
 import {  ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Area, Tooltip, Cell } from 'recharts';
+import Moodlog from './MoodLog';
 
 
     const Graph = (props) => {
@@ -19,6 +20,7 @@ import {  ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Area, Tooltip, Cell }
 
     return (
         <>
+        <Moodlog diaryEntries={props.diaryEntries}/>
         <ComposedChart
             layout="vertical"
             width={500}

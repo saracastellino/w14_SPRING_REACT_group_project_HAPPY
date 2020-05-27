@@ -5,6 +5,7 @@ import mood2 from '../../assets/moods/mood2.png'
 import mood3 from '../../assets/moods/mood3.png'
 import mood4 from '../../assets/moods/mood4.png'
 import mood5 from '../../assets/moods/mood5.png'
+import Quote from '../home/Quote'
 import './SubmitMood.css';
 
 class SubmitMood extends Component{
@@ -58,7 +59,6 @@ class SubmitMood extends Component{
     render(){
         return (
             <>
-            <h2>Hello!</h2>
             <form className="mood-form" onSubmit={this.handleSubmit}>
                 <label>How do you feel today?</label><br/>
                 <div className="mood-radio">
@@ -106,6 +106,8 @@ class SubmitMood extends Component{
                         <br></br>
                 <input type="submit" value="Submit" className="button"/>
             </form>
+            <Quote/>
+          
             </>
         )
     }

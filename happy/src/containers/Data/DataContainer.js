@@ -1,11 +1,12 @@
+//this will have the data entry point from backend
 import React from 'react';
 import SubmitMood from '../../../src/components/MoodData/SubmitMood';
 import Moodlog from '../../components/MoodData/MoodLog';
 import Form from "../../../src/components/Profile/Form";
 import Nav from '../../Nav';
+import Header from '../../components/home/Header';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
 import DiaryEntriesService from "../../services/DiaryEntriesService";
 
 
@@ -13,24 +14,9 @@ class DataContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-    //   diaryEntries: [{
-    //     id: 1,
-    //     dateTime: "22 05 2020",
-    //     mood: 5,
-    //     text: "Ate pizza, coded and loved JS",
-    //     user: "julia"
-    //   }],
-    //   user: {
-    //     id: "",
-    //     name: "",
-    //     age: "",
-    //     dietaryPreferences: "",
-    //     musicType: "",
-    //     fitnessLevel: ""
-    // }
       diaryEntries: [],
       user: {
-        id: "",
+        // id: "",
         name: "",
         age: "",
         dietaryPreferences: "",
@@ -59,9 +45,10 @@ class DataContainer extends React.Component {
   }
 
   handleUserSubmit(submittedUser) {
-    submittedUser.id = Date.now();
-    const userCreated = [...this.state.user, submittedUser];
-    this.setState({ user: userCreated });
+    console.log(submittedUser);
+    this.setState({
+      user: submittedUser
+    })
    }
 
   render(){
@@ -71,7 +58,9 @@ class DataContainer extends React.Component {
           onMoodSubmit={this.handleMoodSubmit}
           onUserSubmit={this.handleUserSubmit}
           diaryEntries={this.state.diaryEntries}
+          user={this.state.user}
         />
+        
         {/* <SubmitMood onMoodSubmit={this.handleMoodSubmit}/> */}
         {/* <Form onUserSubmit={this.handleUserSubmit} /> */}
     
@@ -88,4 +77,4 @@ export default DataContainer;
 
 
 
-//this will have the data entry point from backend
+

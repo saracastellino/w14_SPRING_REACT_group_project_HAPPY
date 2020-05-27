@@ -18,7 +18,6 @@ class DiaryEntry extends Component {
     return (
       <div className="diaryEntry">
         <h4>{this.props.dateTime}</h4>
-        <h4>log id:{this.props.id}</h4>
         <h2>My mood was... {this.props.mood}</h2>
         <h3>What I did that day was... {this.props.children}</h3>
         <h3>

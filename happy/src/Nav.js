@@ -13,6 +13,7 @@ import graph_icon from './assets/navbar/graph_icon.png'
 import home_icon from './assets/navbar/home_icon.png'
 import user_icon from './assets/navbar/user_icon.png'
 import links_icon from './assets/navbar/links_icon.png'
+import Header from './components/home/Header';
 
 const Nav = (props) => (
   <Router>
@@ -30,18 +31,23 @@ const Nav = (props) => (
     <Switch>
 
       <Route path='/submitmood'>
+        <Header user={props.user}/>
         <SubmitMood onMoodSubmit={props.onMoodSubmit}/>
       </Route>
 
       <Route path="/profile">
-        <UserProfile />
+        <Header user={props.user}/>
+        <UserProfile onUserSubmit={props.onUserSubmit} user={props.user}/>
       </Route>
 
       <Route path="/graph">
+        {/* <Graph /> */}
+        <Header user={props.user}/>
         <Graph diaryEntries={props.diaryEntries}/>
       </Route>
 
       <Route path="/links">
+      <Header user={props.user}/>
         <Links />
       </Route>
 

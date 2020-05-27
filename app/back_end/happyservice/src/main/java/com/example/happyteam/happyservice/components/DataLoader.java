@@ -30,12 +30,12 @@ public class DataLoader implements ApplicationRunner {
         userRepository.save(sara);
 
 
+        DiaryEntry diaryEntry3 = new DiaryEntry("19 05 2020", 5, "Reading Harry Potter to my son", julia);
+        diaryEntryRepository.save(diaryEntry3);
+        DiaryEntry diaryEntry2 = new DiaryEntry("20 05 2020", 4, "Using Java", julia);
+        diaryEntryRepository.save(diaryEntry2);
         DiaryEntry diaryEntry1 = new DiaryEntry("22 05 2020", 5, "Ate pizza, coded and loved JS", julia);
         diaryEntryRepository.save(diaryEntry1);
-        DiaryEntry diaryEntry2 = new DiaryEntry("20 05 2020", 4, "Using Java", jun);
-        diaryEntryRepository.save(diaryEntry2);
-        DiaryEntry diaryEntry3 = new DiaryEntry("19 05 2020", 5, "Reading Harry Potter to my son", sara);
-        diaryEntryRepository.save(diaryEntry3);
 
     }
 }
