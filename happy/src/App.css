@@ -148,16 +148,10 @@ img{
 #moodlog-container  {
   max-width: 1400px;
   margin-top: 50px;
-  justify-content: right;
-  align-items: right;
-  align-content: right;
-  justify-self: right;
-  justify-content: left;
-  justify-items: left;
 }
 
 .diaryEntry {
-  padding: 50px;
+  padding: 40px;
   margin: 0;
   box-sizing: border-box;
   flex-basis: 30%;
