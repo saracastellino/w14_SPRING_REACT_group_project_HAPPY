@@ -4,6 +4,9 @@ import DiaryEntry from "./DiaryEntry";
 
 class Moodlog extends Component {
   render() {
+    if (!this.props.diaryEntries) return (
+      <p>Loading...</p>
+      );
     const diaryEntriesLog = this.props.diaryEntries.map(diaryEntry => {
       return (
         <DiaryEntry mood={diaryEntry.mood} dateTime={diaryEntry.dateTime} id={diaryEntry.id}>

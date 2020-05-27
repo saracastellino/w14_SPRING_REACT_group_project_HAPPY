@@ -4,19 +4,23 @@ import Moodlog from './MoodLog';
 
 
     const Graph = (props) => {
-        if (!props.diaryEntries) return null;
-            const data = props.diaryEntries.map (
-                (diaryEntry) => {
-                    return (
-                      {
-                        dateTime : diaryEntry.dateTime, 
-                        mood : diaryEntry.mood,
-                        moodBar : diaryEntry.mood, 
-                        note: diaryEntry.text
-                      }
-                    )
-                }
-            ) 
+
+        if (!props.diaryEntries) return (
+        <p>Loading...</p>
+        );
+
+        const data = props.diaryEntries.map (
+            (diaryEntry) => {
+                return (
+                    {
+                    dateTime : diaryEntry.dateTime, 
+                    mood : diaryEntry.mood,
+                    moodBar : diaryEntry.mood, 
+                    note: diaryEntry.text
+                    }
+                )
+            }
+        ) 
 
     return (
         <>
@@ -26,8 +30,8 @@ import Moodlog from './MoodLog';
         <h1>Your mood in time</h1>
         <ComposedChart
             layout="vertical"
-            width={320}
-            height={250}
+            width={300}
+            height={300}
             data={data}
             margin={{
             top: 50, right: 20, bottom: 20, left: 20,
@@ -42,7 +46,6 @@ import Moodlog from './MoodLog';
             <CartesianGrid stroke="#f5f5f5" />
             <XAxis type="number" domain={[0, 5]} dataKey="x" tick={false}/>
             <YAxis dataKey="dateTime" type="category" />
-            <Tooltip/>
 
             <Area type="monotone" dataKey="mood" stroke="#8884d8" fillOpacity={1} fill="url(#colorMood)" />
             <Bar dataKey="moodBar" barSize={20} fill="#413ea0">
