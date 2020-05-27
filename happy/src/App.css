@@ -2,6 +2,25 @@
   text-align: center;
 }
 
+.navbar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+header {
+  width: max-content;
+  height: auto;
+  size: cover;
+}
+
+
+
+
+
+
+
+/* **************PRESET****************
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +54,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
