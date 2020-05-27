@@ -20,13 +20,13 @@ const Nav = (props) => (
   <Router className="container">
     
     <div className="navbar">
-        <Link to="/submitmood"> <img src={home_icon} alt="home"/></Link>
+        <Link to="/submitmood"> <img className="nav_icon" src={home_icon} alt="home"/></Link>
    
-        <Link to="/graph"> <img src={graph_icon} alt="graph"/></Link>
+        <Link to="/graph"> <img className="nav_icon" src={graph_icon} alt="graph"/></Link>
    
-        <Link to="/profile"> <img src={user_icon} alt="user"/></Link>
+        <Link to="/profile"> <img className="nav_icon" src={user_icon} alt="user"/></Link>
     
-        <Link to="/links"> <img src={links_icon} alt="links"/></Link>
+        <Link to="/links"> <img className="nav_icon" src={links_icon} alt="links"/></Link>
     </div>
     
     <Switch>
@@ -41,7 +41,7 @@ const Nav = (props) => (
       </Route>
 
       <Route path="/graph">
-        <Graph diaryEntries={props.diaryEntries}/>
+        <Graph diaryEntries={props.diaryEntries} />
       </Route>
 
       <Route path="/links">

@@ -21,23 +21,26 @@ class Quote extends Component {
     const allQuotes = this.state.quotes.map(quote => {
       if (!quote.author) return (
           <>
-          <h2>{quote.text}</h2>
-          <h4>(Anonymous)</h4>
+          <span>{quote.text}</span>
+          <br></br>
+          <br></br>
+          <span>(Anonymous)</span>
           </>)
       return (
-        <div className="quote">
-          <h2>{quote.text}</h2>
-          <h4>({quote.author})</h4>
-        </div>
-        
+        <>
+          <span>{quote.text}</span>
+          <br></br>
+          <br></br>
+          <span>({quote.author})</span>
+        </>
         );
       })
       const quoteOfTheDay = allQuotes[Math.floor(Math.random() * allQuotes.length)];
       return (
-       <>
-       <h2>Quote of the day</h2>
-         <h3> {quoteOfTheDay} </h3>
-       </>
+        <div className="quote">
+          <h1>Quote of the day</h1>
+          <h3> {quoteOfTheDay} </h3>
+       </div>
       )
   }
 }

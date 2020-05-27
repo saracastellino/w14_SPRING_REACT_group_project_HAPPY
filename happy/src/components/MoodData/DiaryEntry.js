@@ -22,13 +22,13 @@ class DiaryEntry extends Component {
           <h2>My mood was... {this.props.mood}</h2>
           <h3>What I did that day was... {this.props.children}</h3>
           <h3>
-            <button 
+            {/* <button 
               value={this.props.id}
               key={this.props.id}
               onClick={this.handleDelete}
             >
               delete
-            </button>
+            </button> */}
           </h3>
         </div>
       </div>

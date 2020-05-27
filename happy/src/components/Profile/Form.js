@@ -119,7 +119,8 @@ class Form extends Component {
      if("" === this.props.user.name){
       return (
         <>
-        <label>First time on Happy? Please create your profile</label>
+        <h1>First time on Happy?</h1>
+        <h3>Please create your profile</h3>
         <form className="profile-form" onSubmit={this.handleSubmit}>
           <h2>Your name: </h2>
           <br/>

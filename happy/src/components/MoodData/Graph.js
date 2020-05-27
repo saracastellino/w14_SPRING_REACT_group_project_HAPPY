@@ -20,15 +20,17 @@ import Moodlog from './MoodLog';
 
     return (
         <>
+        <h1>Your mood diary</h1>
         <Moodlog diaryEntries={props.diaryEntries}/>
+
+        <h1>Your mood in time</h1>
         <ComposedChart
-            className="graph"
             layout="vertical"
-            width={500}
-            height={400}
+            width={320}
+            height={250}
             data={data}
             margin={{
-            top: 20, right: 20, bottom: 20, left: 20,
+            top: 50, right: 20, bottom: 20, left: 20,
             }}
         >
             <defs>
@@ -59,6 +61,7 @@ import Moodlog from './MoodLog';
                 }
             </Bar>
         </ComposedChart>
+    
         </>
     );
 }
