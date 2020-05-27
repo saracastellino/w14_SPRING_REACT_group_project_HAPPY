@@ -24,7 +24,7 @@ class Links extends Component {
             <h3>Text: 85258. Shout is volunteer-run and is the UK’s first 24/7 crises text service, free on all major mobile networks, for anyone in crisis anytime, anywhere.</h3>
             <br></br>
             <br></br>
-            <h2><a rel="noopener" href="https://www.mentalhealth.org.uk" target="_blank"><strong>Mental Health Foundation.</strong></a></h2>
+            <h2><a rel="noopener" href="https://www.mentalhealth.org.uk" target="_blank"><strong>Mental Health Foundation</strong></a></h2>
             <h3>Information and support for anyone with mental health problems or learning disabilities.</h3>
       </div>
      </>

@@ -1,13 +1,9 @@
 import React from 'react';
-import {  ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Area, Tooltip, Cell } from 'recharts';
+import {  ComposedChart, Bar, XAxis, YAxis, CartesianGrid, Area, Cell } from 'recharts';
 import Moodlog from './MoodLog';
 
 
     const Graph = (props) => {
-
-        if (!props.diaryEntries) return (
-        <p>Loading...</p>
-        );
 
         const data = props.diaryEntries.map (
             (diaryEntry) => {
@@ -22,6 +18,10 @@ import Moodlog from './MoodLog';
             }
         ) 
 
+    if (!props.diaryEntries) return (
+            <p>Loading...</p>
+            );
+
     return (
         <>
         <h1>Your mood diary</h1>
@@ -31,7 +31,7 @@ import Moodlog from './MoodLog';
         <ComposedChart
             layout="vertical"
             width={300}
-            height={300}
+            height={500}
             data={data}
             margin={{
             top: 50, right: 20, bottom: 20, left: 20,

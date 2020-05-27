@@ -56,6 +56,10 @@ class SubmitMood extends Component{
     }
 
     render(){
+        // For mood icons credit to https://www.iconshock.com/face-icons/
+        if (!this.state.mood === 0){
+            return <p>Loading...</p>
+          }
         return (
             <>
             <form className="mood-form" onSubmit={this.handleSubmit}>

@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import header from './assets/header2.png';
 import footer from './assets/footer2.png';
 import DataContainer from './containers/Data/DataContainer';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
  class App extends React.Component {
    render(){

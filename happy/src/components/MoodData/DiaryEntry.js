@@ -19,8 +19,8 @@ class DiaryEntry extends Component {
       <div className="zoom" id="moodlog-container">
         <div className="diaryEntry">
           <h4>{this.props.dateTime}</h4>
-          <h2>My mood was... {this.props.mood}</h2>
-          <h3>What I did that day was... {this.props.children}</h3>
+          <h2>My mood level was... {this.props.mood}</h2>
+          <h3>My note was...<br></br> "{this.props.children}"</h3>
           <h3>
             {/* <button 
               value={this.props.id}

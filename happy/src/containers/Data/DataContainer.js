@@ -1,12 +1,8 @@
 //this will have the data entry point from backend
 import React from 'react';
-import SubmitMood from '../../../src/components/MoodData/SubmitMood';
-import Moodlog from '../../components/MoodData/MoodLog';
-import Form from "../../../src/components/Profile/Form";
 import Nav from '../../Nav';
-import Header from '../../components/home/Header';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import DiaryEntriesService from "../../services/DiaryEntriesService";
 
 
