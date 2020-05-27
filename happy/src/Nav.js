@@ -16,7 +16,8 @@ import links_icon from './assets/navbar/links_icon.png'
 import Header from './components/home/Header';
 
 const Nav = (props) => (
-  <Router>
+
+  <Router className="container">
     
     <div className="navbar">
         <Link to="/submitmood"> <img src={home_icon} alt="home"/></Link>
@@ -36,27 +37,25 @@ const Nav = (props) => (
       </Route>
 
       <Route path="/profile">
-        <Header user={props.user}/>
         <UserProfile onUserSubmit={props.onUserSubmit} user={props.user}/>
       </Route>
 
       <Route path="/graph">
-        {/* <Graph /> */}
-        <Header user={props.user}/>
         <Graph diaryEntries={props.diaryEntries}/>
       </Route>
 
       <Route path="/links">
-      <Header user={props.user}/>
         <Links />
       </Route>
 
 
 
     </Switch>
-
+   
 
   </Router>
+
+   
 );
 
 export default Nav;

@@ -9,20 +9,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
    render(){
      return(
        <>
-        <div className="margins-img">
-          <img src={header} alt="header"/>
+        <div>
+          <img className="header-img" src={header} alt="header"/>
         </div>
 
        <DataContainer />
-        {/* <div class="navbar" id="myNavbar">
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-          </div> */}
-        <div className="margins-img">
-          <img src={footer} alt="footer"/>
+
+        <div>
+          <img className="footer-img" src={footer} alt="footer"/>
         </div>
       </>
      );

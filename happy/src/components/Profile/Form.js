@@ -119,9 +119,9 @@ class Form extends Component {
      if("" === this.props.user.name){
       return (
         <>
-        <p>First time on Happy? Please create your profile</p>
+        <label>First time on Happy? Please create your profile</label>
         <form className="profile-form" onSubmit={this.handleSubmit}>
-          <label>Input your name: </label>
+          <h2>Your name: </h2>
           <br/>
           <input
             type="text"
@@ -130,7 +130,7 @@ class Form extends Component {
             onChange={this.handleNameChange}
           />
           <br/>
-          <label>Input your age: </label>
+          <h2>Your age: </h2>
           <br/>
           <input
             type="number"
@@ -139,7 +139,7 @@ class Form extends Component {
             onChange={this.handleAgeChange}
           />
           <br/>
-          <label>Input your dietary habits: </label>
+          <h2>Your dietary habits: </h2>
           <br/>
            <input
             type="string"
@@ -148,7 +148,7 @@ class Form extends Component {
              onChange={this.handleDietaryPreferencesChange}
           />
           <br/>
-          <label>Input your favourit music type: </label>
+          <h2>Your favourit music type: </h2>
           <br/>
            <input
             type="string"
@@ -157,7 +157,7 @@ class Form extends Component {
              onChange={this.handleMusicTypeChange}
           />
           <br/>
-          <label>Input your fitness level</label>
+          <h2>Your fitness level</h2>
           <br/>
            <input
             type="number"
@@ -166,16 +166,16 @@ class Form extends Component {
              onChange={this.handleFitnessLevelChange}
           />
           <br/>
-          <input type="submit" value="Post" />
+          <input type="submit" value="Post" className="button"/>
         </form>
         </>
       );
      }else{
        return(
          <>
-         <p>Wish to change your profile?</p>
+         <h2>Wish to change your profile?</h2>
          <form className="profile-form-update" onSubmit={this.handleUpdate}>
-          <label>Input your name: </label>
+          <h2>Your name: </h2>
           <br/>
           <input
             type="text"
@@ -185,7 +185,7 @@ class Form extends Component {
             onChange={this.handleNameChange}
           />
           <br/>
-          <label>Input your age: </label>
+          <h2>Your age: </h2>
           <br/>
           <input
             type="number"
@@ -195,7 +195,7 @@ class Form extends Component {
             name="age"
           />
           <br/>
-          <label>Input your dietary habits: </label>
+          <h2>Your dietary habits: </h2>
           <br/>
            <input
             type="string"
@@ -205,7 +205,7 @@ class Form extends Component {
              name="dietary"
           />
           <br/>
-          <label>Input your favourit music type: </label>
+          <h2>Your favourite music type: </h2>
           <br/>
            <input
             type="string"
@@ -215,7 +215,7 @@ class Form extends Component {
              name="music"
           />
           <br/>
-          <label>Input your fitness level</label>
+          <h2>Your fitness level</h2>
           <br/>
            <input
             type="number"
@@ -225,7 +225,7 @@ class Form extends Component {
              name="fitness"
           />
           <br/>
-          <input type="submit" value="Post" />
+          <input type="submit" value="Post" className="button"/>
         </form>
          </>
        )

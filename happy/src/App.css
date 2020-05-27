@@ -1,52 +1,47 @@
 .App {
   text-align: center;
-  margin: 0%;
-  padding: 0%;
+  margin: auto;
   align-items: center;
   justify-content: center;
   position: relative;
   width: max-content;
   overflow: visible;
   font-family: 'PT Sans Narrow', sans-serif;
+  display: flex;
 }
 
-.margins-img {
-  height: auto;
+Header {
+  margin: 1.5em;
+}
+
+.header-img {
   width: 100%;
-  size: cover;
-  margin: 0%;
-  padding: 0%;
-  align-items: center;
-  justify-content: center;
-}
-/* 
-.App {
-  margin: 0%;
-  padding: 0%;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  font-size: calc(20px + 2vmin);
-  font-family: 'Fredoka One', cursive;
-  color: gray;
+  height: 20%; 
   position: relative;
-  width: max-content;
-  overflow: visible;
+  margin-top: 0;
+  left: 0;
 }
 
-header {
-  height: auto;
-  width: auto;
-  size: cover;
-} */
+.footer-img {
+  width: 100%;
+  height: 20%; 
+  position: relative;
+  margin-bottom: 0;
+  left: 0;
+}
 
 .navbar {
     display: flex;
     flex-direction: row;
-    text-align: center;
+    align-items: flex-end; 
 }
 
 /* ************* PROFILE FORM ****************** */
+
+.profile-form {
+  margin: 1.5em;
+}
+
 label {
   font-size: xx-large;
   font-family: 'Pacifico', cursive;
@@ -56,6 +51,20 @@ h2, h4 {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
+
+/* ************* MOOD FORM ****************** */
+
+textarea {
+  border: 2px solid #6111ff;
+  border-radius: 5px;
+}
+
+.mood-form {
+  margin: 1.5em;
+}
+
+/* ************* BUTTON ****************** */
+
 .button {
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 800;
@@ -63,7 +72,7 @@ h2, h4 {
   border: 2px solid #6011ff56;
   border-radius: 5px;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -83,9 +92,9 @@ h2, h4 {
 
 .diaryEntry-container {
   max-width: 1400px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */ 
 }
 
 .diaryEntry {
@@ -120,17 +129,6 @@ h2, h4 {
 
 .zoom:hover {
   transform: scale(1.1); 
-}
-
-/* ************* MOOD FORM ****************** */
-
-textarea {
-  border: 2px solid #6111ff;
-  border-radius: 5px;
-}
-
-.mood-form {
-  margin-bottom: 4em;
 }
 
 
