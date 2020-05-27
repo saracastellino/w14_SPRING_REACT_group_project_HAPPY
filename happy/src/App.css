@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  
+  font-family: 'Pacifico', cursive;
+}
+
+header {
+  width: max-content;
+  height: auto;
+  size: cover;
 }
 
 .navbar {
@@ -8,11 +16,16 @@
     text-align: center;
 }
 
-header {
-  width: max-content;
-  height: auto;
-  size: cover;
+label {
+  font-size: xx-large;
+  font-family: 'Pacifico', cursive;
 }
+
+h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+
 
 
 
