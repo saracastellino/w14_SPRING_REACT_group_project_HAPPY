@@ -5,28 +5,26 @@
 div.mood-radio{
     display: flex;
     text-align: center;
+    margin-bottom: 4em;
 }
 
 div.mood{
     display:flex;
     flex-direction: column;
-    border-style: solid;
+    /* border-style: solid; */
     text-align: center;
 }
 
 label.mood-desc{
-    font-size: 10px;
+    font-size: 1em;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 img{
     width: 60px;
 }
 
-ul {
-    border-style: solid;
-    /* list-style-type: none; */
-    text-align: center;
-}
+
 
 /* li{
     text-align: center;

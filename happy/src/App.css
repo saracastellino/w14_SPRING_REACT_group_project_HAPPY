@@ -1,12 +1,44 @@
 .App {
   text-align: center;
+  margin: 0%;
+  padding: 0%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: max-content;
+  overflow: visible;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.margins-img {
+  height: auto;
+  width: 100%;
+  size: cover;
+  margin: 0%;
+  padding: 0%;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+.App {
+  margin: 0%;
+  padding: 0%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  font-family: 'Fredoka One', cursive;
+  color: gray;
+  position: relative;
+  width: max-content;
+  overflow: visible;
 }
 
 header {
-  width: max-content;
   height: auto;
+  width: auto;
   size: cover;
-}
+} */
 
 .navbar {
     display: flex;
@@ -14,13 +46,13 @@ header {
     text-align: center;
 }
 
-/* *************PROFILE FORM****************** */
+/* ************* PROFILE FORM ****************** */
 label {
   font-size: xx-large;
   font-family: 'Pacifico', cursive;
 }
 
-h2 {
+h2, h4 {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
@@ -29,6 +61,7 @@ h2 {
   font-weight: 800;
   background-color:#6111ff; 
   border: 2px solid #6011ff56;
+  border-radius: 5px;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -39,7 +72,6 @@ h2 {
   cursor: pointer;
   -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
-  border-radius: 5px;
 }
 
 .button:hover {
@@ -47,7 +79,70 @@ h2 {
 }
 
 
-/* *************NAVBAR****************** */
+/* ************* DIARY ENTRY ****************** */
+
+.diaryEntry-container {
+  max-width: 1400px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+
+.diaryEntry {
+  padding: 20px;
+  margin: 20px;
+  box-sizing: border-box;
+  flex-basis: 30%;
+  text-align: center;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: gray;
+  background-image: url("./assets/mood_box.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: local; 
+  background-position: center; 
+}
+
+@media (min-width: 900px) {
+  .diaryEntry-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.diaryEntry.zoom {
+  padding-bottom: 150px;
+  transition: transform .2s; 
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.1); 
+}
+
+/* ************* MOOD FORM ****************** */
+
+textarea {
+  border: 2px solid #6111ff;
+  border-radius: 5px;
+}
+
+.mood-form {
+  margin-bottom: 4em;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -60,13 +60,6 @@ class DataContainer extends React.Component {
           diaryEntries={this.state.diaryEntries}
           user={this.state.user}
         />
-        
-        {/* <SubmitMood onMoodSubmit={this.handleMoodSubmit}/> */}
-        {/* <Form onUserSubmit={this.handleUserSubmit} /> */}
-    
-        {/* <h1>Mood Diary</h1>
-        <Moodlog diaryEntries={this.state.diaryEntries}/> */}
-
       </Router>
     );
   }

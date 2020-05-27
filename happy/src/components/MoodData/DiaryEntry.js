@@ -16,19 +16,21 @@ class DiaryEntry extends Component {
 
   render() {
     return (
-      <div className="diaryEntry">
-        <h4>{this.props.dateTime}</h4>
-        <h2>My mood was... {this.props.mood}</h2>
-        <h3>What I did that day was... {this.props.children}</h3>
-        <h3>
-          <button 
-            value={this.props.id}
-            key={this.props.id}
-            onClick={this.handleDelete}
-          >
-            delete
-          </button>
-        </h3>
+      <div className="zoom" id="moodlog-container">
+        <div className="diaryEntry">
+          <h4>{this.props.dateTime}</h4>
+          <h2>My mood was... {this.props.mood}</h2>
+          <h3>What I did that day was... {this.props.children}</h3>
+          <h3>
+            <button 
+              value={this.props.id}
+              key={this.props.id}
+              onClick={this.handleDelete}
+            >
+              delete
+            </button>
+          </h3>
+        </div>
       </div>
     );
   }

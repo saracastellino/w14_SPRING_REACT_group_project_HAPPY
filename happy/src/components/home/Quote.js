@@ -21,12 +21,12 @@ class Quote extends Component {
     const allQuotes = this.state.quotes.map(quote => {
       if (!quote.author) return (
           <>
-          <p>{quote.text}</p>
+          <h2>{quote.text}</h2>
           <h4>(Anonymous)</h4>
           </>)
       return (
           <>
-          <p>{quote.text}</p>
+          <h2>{quote.text}</h2>
           <h4>({quote.author})</h4>
           </>
         );
@@ -34,6 +34,7 @@ class Quote extends Component {
       const quoteOfTheDay = allQuotes[Math.floor(Math.random() * allQuotes.length)];
       return (
        <>
+       <h2>Quote of the day</h2>
          <h3> {quoteOfTheDay} </h3>
        </>
       )

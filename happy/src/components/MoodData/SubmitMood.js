@@ -59,6 +59,7 @@ class SubmitMood extends Component{
     render(){
         return (
             <>
+            {/* <h2>Hello {user.name}</h2> */}
             <form className="mood-form" onSubmit={this.handleSubmit}>
                 <label>How do you feel today?</label><br/>
                 <div className="mood-radio">
@@ -101,7 +102,7 @@ class SubmitMood extends Component{
           
                 <label>Want to add a note?</label><br/>
                         <textarea for="message" form="form" name="message" id="message" 
-                        rows="10" maxlength="100" minlength="5" 
+                        rows="5" maxlength="50" minlength="5" 
                         type="submit" value= {this.state.text} onChange={this.handleTextChange}></textarea>
                         <br></br>
                 <input type="submit" value="Submit" className="button"/>
