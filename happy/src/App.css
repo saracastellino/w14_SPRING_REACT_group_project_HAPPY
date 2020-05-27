@@ -36,7 +36,6 @@ h5 {
   margin-top: 5%;
   padding-top: 0%;
   margin-bottom: 50%;
-  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 /* ************* NAVBAR, HEADER AND FOOTER ****************** */
@@ -80,7 +79,7 @@ h5 {
 }
 
 @media (min-width: 900px) {
-  .diaryEntry-container {
+  .navbar {
     display: flex;
     justify-content: space-between;
   }
@@ -145,25 +144,28 @@ img{
 
 /* ************* DIARY ENTRY ****************** */
 
-.diaryEntry-container {
+
+#moodlog-container  {
   max-width: 1400px;
-  display: flex;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */ 
+  margin-top: 50px;
+  justify-content: right;
+  align-items: right;
+  align-content: right;
+  justify-self: right;
+  justify-content: left;
+  justify-items: left;
 }
 
 .diaryEntry {
-  padding: 20px;
-  margin: 20px;
+  padding: 50px;
+  margin: 0;
   box-sizing: border-box;
   flex-basis: 30%;
   text-align: center;
   font-family: 'PT Sans Narrow', sans-serif;
   background-image: url("./assets/mood_box.jpg");
   background-repeat: no-repeat;
-  position: relative;
-  background-attachment: local; 
-  background-position: center; 
+  background-size: cover;
 }
 
 @media (min-width: 900px) {
@@ -172,6 +174,14 @@ img{
     justify-content: space-between;
   }
 }
+
+.diaryEntry.h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+} 
+
 
 .diaryEntry.zoom {
   padding-bottom: 150px;

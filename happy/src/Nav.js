@@ -17,7 +17,7 @@ import Header from './components/home/Header';
 
 const Nav = (props) => (
 
-  <Router className="container">
+  <Router>
     
     <div className="navbar">
         <Link to="/submitmood"> <img className="nav_icon" src={home_icon} alt="home"/></Link>
