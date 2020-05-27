@@ -57,6 +57,8 @@ class SubmitMood extends Component{
 
     render(){
         return (
+            <>
+            <h2>Hello!</h2>
             <form className="mood-form" onSubmit={this.handleSubmit}>
                 <label>How do you feel today?</label><br/>
                 <div className="mood-radio">
@@ -103,9 +105,8 @@ class SubmitMood extends Component{
                         type="submit" value= {this.state.text} onChange={this.handleTextChange}></textarea>
                         <br></br>
                 <input type="submit" value="save"/>
-
-
             </form>
+            </>
         )
     }
 
