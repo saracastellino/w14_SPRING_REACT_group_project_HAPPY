@@ -104,7 +104,7 @@ class SubmitMood extends Component{
                         rows="10" maxlength="100" minlength="5" 
                         type="submit" value= {this.state.text} onChange={this.handleTextChange}></textarea>
                         <br></br>
-                <input type="submit" value="save"/>
+                <input type="submit" value="Submit" className="button"/>
             </form>
             </>
         )
