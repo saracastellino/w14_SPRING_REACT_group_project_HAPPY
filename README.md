@@ -29,9 +29,11 @@ JavaScript/React, Java/Spring, H2.
 
 ## Demo
 
-Homepage and mood log form:
+Homepage and mood log form:   
+
 ![Happy demo part 1](https://github.com/saracastellino/w14_SPRING_REACT_group_project_HAPPY/blob/master/UX%20and%20UI/happy%20demo.gif)
 
-Mood diary:
+Mood diary:    
+
 ![Happy demo part 2](https://github.com/saracastellino/w14_SPRING_REACT_group_project_HAPPY/blob/master/UX%20and%20UI/happy%20demo%20part%202.gif)
 
