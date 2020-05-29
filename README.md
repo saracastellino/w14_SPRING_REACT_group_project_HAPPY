@@ -29,4 +29,5 @@ JavaScript/React, Java/Spring, H2.
 
 ## Demo
 
-![Happy demo](https://gph.is/g/4A6oy7e)
+
+<iframe src="https://giphy.com/embed/f7GCEqvaDuSg6iybhy" width="388" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/f7GCEqvaDuSg6iybhy">Happy demo</a></p>
