@@ -30,4 +30,8 @@ JavaScript/React, Java/Spring, H2.
 ## Demo
 
 
-![Happy demo](https://media.giphy.com/media/f7GCEqvaDuSg6iybhy/200w_d.gif)
+![Happy demo part 1](https://github.com/saracastellino/w14_SPRING_REACT_group_project_HAPPY/blob/master/UX%20and%20UI/happy%20demo.gif)
+
+
+![Happy demo part 2](https://github.com/saracastellino/w14_SPRING_REACT_group_project_HAPPY/blob/master/UX%20and%20UI/happy%20demo%20part%202.gif)
+
