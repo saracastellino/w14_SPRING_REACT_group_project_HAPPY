@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee43cb8a-d01a-4b2b-94f4-00caa7102ebe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/src/main/java/com/example/happyteam/happyservice/HappyserviceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/src/main/java/com/example/happyteam/happyservice/controllers/DiaryEntryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/src/main/java/com/example/happyteam/happyservice/models/DiaryEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/src/main/java/com/example/happyteam/happyservice/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/src/main/java/com/example/happyteam/happyservice/repositories/DiaryEntryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/src/main/java/com/example/happyteam/happyservice/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../happyservice/src/test/java/com/example/happyteam/happyservice/HappyserviceApplicationTests.java" beforeDir="false" />
-    </list>
+    <list default="true" id="ee43cb8a-d01a-4b2b-94f4-00caa7102ebe" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,33 +24,75 @@
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1cGOWiC9gS3lp51WgZMhSpPDUkw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunManager" selected="Application.HappyserviceApplication">
+    <configuration name="HappyserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.happyteam.happyservice.HappyserviceApplication" />
+      <module name="happyservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.happyteam.happyservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HappyserviceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="happyservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.happyteam.happyservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.happyteam.happyservice" />
+      <option name="MAIN_CLASS_NAME" value="com.example.happyteam.happyservice.HappyserviceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <item itemvalue="Application.HappyserviceApplication" />
+        <item itemvalue="JUnit.HappyserviceApplicationTests" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -82,6 +111,14 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="343" y="68" key="#Project_Structure" timestamp="1591632967562">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state x="343" y="68" key="#Project_Structure/1680.23.1920.1057/0.23.1680.954@0.23.1680.954" timestamp="1591632967562" />
+    <state x="326" y="149" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591632737512">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state x="326" y="149" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.23.1920.1057/0.23.1680.954@0.23.1680.954" timestamp="1591632737512" />
     <state x="556" y="186" key="#com.intellij.ide.util.MemberChooser" timestamp="1590153427588">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -90,10 +127,27 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="664" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1590153316423" />
-    <state x="338" y="100" key="SettingsEditor" timestamp="1590154579750">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="1509" height="57" key="GridCell.Tab.0.bottom" timestamp="1591632606255">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state width="1509" height="57" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.954@0.23.1680.954" timestamp="1591632606255" />
+    <state width="1509" height="57" key="GridCell.Tab.0.center" timestamp="1591632606254">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state width="1509" height="57" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.954@0.23.1680.954" timestamp="1591632606254" />
+    <state width="1509" height="57" key="GridCell.Tab.0.left" timestamp="1591632606253">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state width="1509" height="57" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.954@0.23.1680.954" timestamp="1591632606253" />
+    <state width="1509" height="57" key="GridCell.Tab.0.right" timestamp="1591632606254">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state width="1509" height="57" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.954@0.23.1680.954" timestamp="1591632606254" />
+    <state x="394" y="107" key="SettingsEditor" timestamp="1591633547992">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="338" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1590154579750" />
+    <state x="394" y="107" key="SettingsEditor/1680.23.1920.1057/0.23.1680.954@0.23.1680.954" timestamp="1591633547992" />
     <state x="524" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1590154307439">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
