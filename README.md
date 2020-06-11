@@ -37,3 +37,33 @@ Mood diary:
 
 ![Happy demo part 2](https://github.com/saracastellino/w14_SPRING_REACT_group_project_HAPPY/blob/master/UX%20and%20UI/happy%20demo%20part%202.gif)
 
+
+# Installing / Getting started
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Clone the project down and CD into 'Happy' directory.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+`npm start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Dependencies
+```
+npm install react-router-dom
+npm install recharts
+```
+
