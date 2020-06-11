@@ -69,3 +69,10 @@ npm install react-router-dom
 npm install recharts
 ```
 
+# server
+
+## Project setup
+
+In order to build the project, CD into 'app/Backend' directory.
+
+The project can be opened and built by a recent version of the NetBeans, Eclipse or Idea IDEs.
