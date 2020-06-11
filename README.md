@@ -40,6 +40,8 @@ Mood diary:
 
 # Installing / Getting started
 
+# client
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Clone the project down and CD into 'Happy' directory.
